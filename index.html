@@ -1,0 +1,891 @@
+﻿<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIIDEG | Cursos y formaciones en gestiÃ³n de servicios de salud</title>
+  <meta name="description" content="CIIDEG ofrece cursos virtuales, formaciones especializadas y asesorÃ­a en gestiÃ³n de servicios de salud con modelo GEMSES, campus 24/7 y productos aplicables.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="CIIDEG">
+  <meta name="theme-color" content="#12385f">
+  <link rel="canonical" href="https://ciideg.com/">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="CIIDEG">
+  <meta property="og:title" content="CIIDEG | FormaciÃ³n aplicada en gestiÃ³n de salud">
+  <meta property="og:description" content="EspecialÃ­zate en gestiÃ³n moderna, procesos, proyectos, indicadores, IA en salud y herramientas digitales con enfoque prÃ¡ctico.">
+  <meta property="og:url" content="https://ciideg.com/">
+  <meta property="og:image" content="https://ciideg.com/assets/logo-ciideg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --ink: #142233;
+      --muted: #5a6a7d;
+      --line: #d9e2ec;
+      --soft: #f5f8fb;
+      --white: #fff;
+      --brand: #12385f;
+      --brand-2: #1f6a8a;
+      --accent: #d7a526;
+      --accent-2: #f0c85d;
+      --green: #168a63;
+      --red: #bd3f32;
+      --shadow: 0 18px 45px rgba(14, 35, 55, .12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      background: var(--white);
+      text-rendering: optimizeLegibility;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid rgba(215, 165, 38, .55); outline-offset: 3px; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+    .section { padding: 74px 0; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--brand-2);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: var(--accent);
+    }
+    h1, h2, h3 { letter-spacing: 0; line-height: 1.08; margin: 0; }
+    h1 { font-size: clamp(2.35rem, 5vw, 4.6rem); max-width: 980px; }
+    h2 { font-size: clamp(2rem, 3vw, 3rem); color: var(--brand); }
+    h3 { font-size: 1.18rem; }
+    p { margin: 0; }
+
+    .topbar {
+      background: #0d263f;
+      color: #dfeaf4;
+      font-size: .92rem;
+    }
+    .topbar .container {
+      min-height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .topbar strong { color: var(--accent-2); }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid rgba(217, 226, 236, .8);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      color: var(--brand);
+      letter-spacing: .02em;
+    }
+    .brand img { width: 48px; height: 56px; object-fit: contain; }
+    .brand span { font-size: 1.24rem; }
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: #46566a;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+    .navlinks a { text-decoration: none; }
+    .navlinks a:hover { color: var(--brand); }
+    .menu-btn { display: none; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 850;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      font-size: .98rem;
+      font-family: inherit;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      color: #10243a;
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      box-shadow: 0 10px 25px rgba(215, 165, 38, .28);
+    }
+    .btn-dark { background: var(--brand); color: var(--white); }
+    .btn-outline { border-color: rgba(255, 255, 255, .4); color: var(--white); }
+    .btn-outline:hover { border-color: var(--accent-2); color: var(--accent-2); }
+    .menu-btn.btn { display: none; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(115deg, rgba(11, 32, 54, .96) 0%, rgba(18, 56, 95, .92) 50%, rgba(31, 106, 138, .86) 100%),
+        radial-gradient(circle at 82% 16%, rgba(215, 165, 38, .26), transparent 36%);
+      padding: 78px 0 64px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) 390px;
+      gap: 46px;
+      align-items: center;
+    }
+    .hero .eyebrow { color: var(--accent-2); }
+    .hero-lead {
+      max-width: 760px;
+      margin-top: 22px;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 38px;
+      max-width: 820px;
+    }
+    .hero-point {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      color: rgba(255,255,255,.82);
+      font-size: .94rem;
+    }
+    .hero-point strong { display: block; color: var(--white); font-size: 1.05rem; }
+    .hero-card {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 28px 70px rgba(4, 16, 31, .28);
+    }
+    .hero-logo {
+      width: 112px;
+      margin: 0 auto 18px;
+      filter: drop-shadow(0 14px 26px rgba(0,0,0,.2));
+    }
+    .hero-card h2 { color: var(--white); font-size: 1.45rem; text-align: center; }
+    .hero-card p { color: rgba(255,255,255,.78); text-align: center; margin-top: 10px; }
+    .mini-list {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      gap: 11px;
+    }
+    .mini-list li {
+      display: flex;
+      gap: 10px;
+      color: rgba(255,255,255,.9);
+      font-size: .94rem;
+    }
+    .check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 20px;
+      color: #0e2b45;
+      background: var(--accent-2);
+      font-size: .78rem;
+      font-weight: 900;
+    }
+
+    .proof {
+      background: var(--soft);
+      border-bottom: 1px solid var(--line);
+    }
+    .proof-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .proof-item {
+      background: var(--white);
+      padding: 22px;
+    }
+    .proof-item strong { display: block; color: var(--brand); font-size: 1.02rem; }
+    .proof-item span { display: block; color: var(--muted); margin-top: 5px; font-size: .92rem; }
+
+    .split {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 54px;
+      align-items: start;
+    }
+    .section-copy { color: var(--muted); font-size: 1.07rem; margin-top: 18px; max-width: 680px; }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .value-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .value {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .value-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius);
+      background: #e7f2f5;
+      color: var(--brand-2);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+    .value p { color: var(--muted); margin-top: 5px; font-size: .95rem; }
+
+    .programs { background: var(--soft); }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+    .section-head p { color: var(--muted); max-width: 520px; }
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .program {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .program.featured {
+      border-top: 5px solid var(--accent);
+      box-shadow: var(--shadow);
+    }
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #e9f3f6;
+      color: var(--brand-2);
+      font-size: .76rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 15px;
+    }
+    .program p { color: var(--muted); margin: 12px 0 18px; }
+    .program ul {
+      padding-left: 19px;
+      margin: auto 0 0;
+      color: #415267;
+      font-size: .94rem;
+    }
+    .program li + li { margin-top: 8px; }
+
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+      background: var(--white);
+      font-weight: 750;
+      color: #34475c;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+    }
+
+    .method {
+      background: #10243a;
+      color: var(--white);
+    }
+    .method h2 { color: var(--white); }
+    .method .section-copy { color: rgba(255,255,255,.78); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .step {
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(255,255,255,.06);
+    }
+    .step span {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #10243a;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .step p { color: rgba(255,255,255,.76); margin-top: 8px; font-size: .94rem; }
+
+    .lead {
+      background: linear-gradient(135deg, #f6f9fc 0%, #fff 70%);
+    }
+    .lead-card {
+      display: grid;
+      grid-template-columns: 1fr 410px;
+      gap: 34px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+    .form {
+      display: grid;
+      gap: 12px;
+    }
+    label {
+      font-size: .85rem;
+      font-weight: 800;
+      color: #34475c;
+    }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #c8d5e1;
+      border-radius: var(--radius);
+      min-height: 46px;
+      padding: 11px 12px;
+      font: inherit;
+      color: var(--ink);
+      background: var(--white);
+    }
+    textarea { min-height: 88px; resize: vertical; }
+    .note { color: var(--muted); font-size: .86rem; }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+      max-width: 900px;
+      margin-top: 28px;
+    }
+    details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      padding: 18px 20px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 850;
+      color: var(--brand);
+    }
+    details p { color: var(--muted); margin-top: 12px; }
+
+    .footer {
+      background: #0d1b2a;
+      color: rgba(255,255,255,.78);
+      padding: 46px 0 28px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 34px;
+    }
+    .footer .brand { color: var(--white); }
+    .footer p, .footer a { color: rgba(255,255,255,.68); }
+    .footer a { text-decoration: none; }
+    .footer h3 { color: var(--white); font-size: 1rem; margin-bottom: 12px; }
+    .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 32px;
+      padding-top: 20px;
+      font-size: .86rem;
+      color: rgba(255,255,255,.52);
+    }
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 20;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: #20b45b;
+      box-shadow: 0 12px 28px rgba(32, 180, 91, .35);
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.35rem;
+    }
+
+    @media (max-width: 980px) {
+      .navlinks {
+        position: fixed;
+        inset: 113px 0 auto 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 16px;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+      }
+      .navlinks.open { display: flex; }
+      .navlinks a { padding: 14px 0; border-bottom: 1px solid var(--line); }
+      .menu-btn.btn {
+        display: inline-flex;
+        background: var(--brand);
+        color: var(--white);
+        border: 0;
+      }
+      .hero-grid, .split, .lead-card, .footer-grid { grid-template-columns: 1fr; }
+      .hero-card { max-width: 460px; }
+      .proof-row { grid-template-columns: repeat(2, 1fr); }
+      .program-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 56px 0; }
+      .topbar .container { font-size: .82rem; }
+      .brand img { width: 42px; height: 50px; }
+      .hero { padding-top: 54px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-points, .proof-row, .program-grid, .catalog, .steps { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 14px; }
+      .lead-card { padding: 22px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://ciideg.com/#organization",
+        "name": "CIIDEG",
+        "legalName": "Centro de InvestigaciÃ³n, InnovaciÃ³n, Desarrollo y GestiÃ³n",
+        "url": "https://ciideg.com/",
+        "logo": "https://ciideg.com/assets/logo-ciideg.png",
+        "email": "informes.ciideg@gmail.com",
+        "telephone": "+51 936 220 771",
+        "areaServed": "PE",
+        "description": "FormaciÃ³n, asesorÃ­a y herramientas para gestiÃ³n moderna de servicios de salud."
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://ciideg.com/#programas",
+        "name": "Cursos y formaciones CIIDEG",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "item": {"@type": "Course", "name": "Programa de EspecializaciÃ³n GEMSES: GestiÃ³n Moderna de los Servicios de Salud", "provider": {"@id": "https://ciideg.com/#organization"}, "description": "Programa integral con cuatro niveles: gestiÃ³n moderna, procesos, proyectos e indicadores en salud."}},
+          {"@type": "ListItem", "position": 2, "item": {"@type": "Course", "name": "Curso de Plan de GestiÃ³n en Salud", "provider": {"@id": "https://ciideg.com/#organization"}, "description": "FormaciÃ³n para elaborar diagnÃ³stico situacional, objetivos, cronograma, monitoreo e indicadores."}},
+          {"@type": "ListItem", "position": 3, "item": {"@type": "Course", "name": "Inteligencia Artificial con enfoque en Salud", "provider": {"@id": "https://ciideg.com/#organization"}, "description": "Curso aplicado sobre IA, prompts, agentes y usos prÃ¡cticos para gestiÃ³n y atenciÃ³n en salud."}}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ciideg.com/#faq",
+        "mainEntity": [
+          {"@type": "Question", "name": "Â¿Los cursos son virtuales?", "acceptedAnswer": {"@type": "Answer", "text": "SÃ­. CIIDEG trabaja con campus virtual disponible 24 horas y programas online segÃºn la formaciÃ³n elegida."}},
+          {"@type": "Question", "name": "Â¿QuÃ© productos se desarrollan durante las formaciones?", "acceptedAnswer": {"@type": "Answer", "text": "SegÃºn el curso, el participante puede desarrollar plan de gestiÃ³n, manual de procesos, proyecto personalizado, cuadro de mando integral, informe de brecha de personal, plantillas o programaciÃ³n de prompts."}},
+          {"@type": "Question", "name": "Â¿CÃ³mo solicito informaciÃ³n?", "acceptedAnswer": {"@type": "Answer", "text": "Puedes escribir a informes.ciideg@gmail.com o comunicarte por WhatsApp al +51 936 220 771."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">FormaciÃ³n aplicada para profesionales e instituciones de salud. <strong>AsesorÃ­a por WhatsApp: +51 936 220 771</strong></div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="CIIDEG inicio">
+        <img src="assets/logo-ciideg.webp" width="48" height="56" alt="Logo CIIDEG">
+        <span>CIIDEG</span>
+      </a>
+      <nav class="navlinks" id="navlinks" aria-label="NavegaciÃ³n principal">
+        <a href="#programas">Formaciones</a>
+        <a href="#metodo">MÃ©todo</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#faq">Preguntas</a>
+        <a class="btn btn-dark" href="#contacto">Solicitar informaciÃ³n</a>
+      </nav>
+      <button class="btn menu-btn" type="button" aria-expanded="false" aria-controls="navlinks" id="menuBtn">MenÃº</button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Centro de InvestigaciÃ³n, InnovaciÃ³n, Desarrollo y GestiÃ³n</p>
+          <h1>FormaciÃ³n prÃ¡ctica para gestionar mejor los servicios de salud</h1>
+          <p class="hero-lead">CIIDEG ayuda a profesionales e instituciones de salud a convertir la experiencia diaria en planes, procesos, indicadores y herramientas digitales que se pueden aplicar en el trabajo real.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#programas">Ver formaciones</a>
+            <a class="btn btn-outline" href="https://wa.me/51936220771?text=Hola%20CIIDEG%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20formaciones" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+          </div>
+          <div class="hero-points" aria-label="Diferenciales de CIIDEG">
+            <div class="hero-point"><strong>Modelo GEMSES</strong>GestiÃ³n moderna con enfoque propio y aplicable.</div>
+            <div class="hero-point"><strong>Campus 24/7</strong>Aprendizaje adaptable a horarios exigentes.</div>
+            <div class="hero-point"><strong>Producto final</strong>Herramientas listas para sustentar o implementar.</div>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Resumen CIIDEG">
+          <img class="hero-logo" src="assets/logo-ciideg.webp" width="112" height="130" alt="CIIDEG">
+          <h2>Excelencia en GestiÃ³n</h2>
+          <p>MÃ¡s de 10 aÃ±os impulsando formaciÃ³n especializada, consultorÃ­a, proyectos e innovaciÃ³n tecnolÃ³gica para salud.</p>
+          <ul class="mini-list">
+            <li><span class="check">âœ“</span><span>Cursos y formaciones especializadas.</span></li>
+            <li><span class="check">âœ“</span><span>ConsultorÃ­a y asesorÃ­a altamente especializada.</span></li>
+            <li><span class="check">âœ“</span><span>Herramientas digitales, investigaciÃ³n y proyectos.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="proof" id="beneficios">
+      <div class="container section">
+        <div class="proof-row">
+          <div class="proof-item"><strong>MetodologÃ­a aplicativa</strong><span>FormaciÃ³n orientada a resultados y uso inmediato.</span></div>
+          <div class="proof-item"><strong>Herramientas de gestiÃ³n</strong><span>Plantillas, informes, indicadores y automatizaciones.</span></div>
+          <div class="proof-item"><strong>Plana docente calificada</strong><span>Especialistas seleccionados por experiencia en la materia.</span></div>
+          <div class="proof-item"><strong>ActualizaciÃ³n constante</strong><span>Mejoras continuas en contenidos y herramientas.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Para profesionales e instituciones</p>
+          <h2>Cuando la gestiÃ³n falla, el problema no es solo tÃ©cnico: tambiÃ©n es de mÃ©todo</h2>
+          <p class="section-copy">En salud no basta con saber mÃ¡s. Hay que ordenar procesos, justificar decisiones, sustentar planes, medir indicadores y usar herramientas digitales sin perder tiempo. Esa es la brecha que CIIDEG cubre.</p>
+        </div>
+        <div class="panel">
+          <div class="value-list">
+            <article class="value">
+              <div class="value-icon">1</div>
+              <div><h3>Diagnostica con estructura</h3><p>Aprende a leer la situaciÃ³n del servicio, priorizar problemas y preparar evidencia para decisiones de gestiÃ³n.</p></div>
+            </article>
+            <article class="value">
+              <div class="value-icon">2</div>
+              <div><h3>Convierte teorÃ­a en entregables</h3><p>Cada formaciÃ³n se orienta a productos: plan de gestiÃ³n, informe de brecha, cuadro de mando, manual o proyecto.</p></div>
+            </article>
+            <article class="value">
+              <div class="value-icon">3</div>
+              <div><h3>Optimiza con tecnologÃ­a</h3><p>Integra herramientas digitales, ofimÃ¡tica, IA y automatizaciÃ³n para reducir carga operativa y mejorar el seguimiento.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section programs" id="programas">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Oferta acadÃ©mica</p>
+            <h2>Formaciones principales de CIIDEG</h2>
+          </div>
+          <p>Seleccionadas desde el documento de formaciones CIIDEG para presentar una pÃ¡gina principal clara, rastreable y enfocada en conversiÃ³n.</p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program featured">
+            <span class="tag">Programa integral</span>
+            <h3>EspecializaciÃ³n GEMSES: GestiÃ³n Moderna de los Servicios de Salud</h3>
+            <p>Programa compuesto por cuatro niveles para aplicar un modelo moderno y Ã¡gil en servicios de salud.</p>
+            <ul>
+              <li>GestiÃ³n moderna de servicios de salud.</li>
+              <li>GestiÃ³n por procesos, proyectos e indicadores.</li>
+              <li>Certificado adicional como Gestor de Excelencia segÃºn GEMSES.</li>
+            </ul>
+          </article>
+          <article class="program featured">
+            <span class="tag">Alta demanda</span>
+            <h3>Plan de GestiÃ³n en Salud</h3>
+            <p>FormaciÃ³n para construir y sustentar un plan con diagnÃ³stico, FODA, objetivos, metas, cronograma e indicadores.</p>
+            <ul>
+              <li>Herramienta FODA automatizada.</li>
+              <li>Plan de monitoreo y cronograma.</li>
+              <li>Producto final: Plan de GestiÃ³n.</li>
+            </ul>
+          </article>
+          <article class="program featured">
+            <span class="tag">InnovaciÃ³n</span>
+            <h3>Inteligencia Artificial con enfoque en Salud</h3>
+            <p>Curso aplicado para usar IA en gestiÃ³n, optimizaciÃ³n de prompts, aplicaciones avanzadas y diseÃ±o de agentes.</p>
+            <ul>
+              <li>IA en salud y Ã©tica de uso.</li>
+              <li>Prompts para actividades reales.</li>
+              <li>Producto final: programaciÃ³n de prompts.</li>
+            </ul>
+          </article>
+          <article class="program">
+            <span class="tag">Procesos</span>
+            <h3>GestiÃ³n por Procesos en Salud</h3>
+            <p>Aprende a mapear, priorizar y evaluar procesos con enfoque de cadena de valor y seguimiento del paciente.</p>
+            <ul><li>Lead time y takt time.</li><li>Producto final: manual de procesos y procedimientos.</li></ul>
+          </article>
+          <article class="program">
+            <span class="tag">Proyectos</span>
+            <h3>GestiÃ³n Moderna de Proyectos en Salud</h3>
+            <p>FormaciÃ³n con Lean Healthcare, trazabilidad, filosofÃ­a Kaizen y mejora de servicios.</p>
+            <ul><li>Fases definir, medir, analizar e implementar.</li><li>Producto final: proyecto personalizado en salud.</li></ul>
+          </article>
+          <article class="program">
+            <span class="tag">Indicadores</span>
+            <h3>GestiÃ³n Moderna de Indicadores en Salud</h3>
+            <p>Curso para gestionar con estrategia, mapa estratÃ©gico, indicadores trazadores y cuadro de mando integral.</p>
+            <ul><li>Indicadores estratÃ©gicos, misionales y de soporte.</li><li>Producto final: cuadro de mando integral.</li></ul>
+          </article>
+          <article class="program">
+            <span class="tag">Talento</span>
+            <h3>Brecha de Personal en Salud</h3>
+            <p>FormaciÃ³n para calcular demanda, brecha de personal, sustentar informes y apoyar procesos de negociaciÃ³n.</p>
+            <ul><li>Herramientas digitales para cÃ¡lculo y requerimiento.</li><li>Producto final: informe de brecha de personal.</li></ul>
+          </article>
+          <article class="program">
+            <span class="tag">LogÃ­stica clÃ­nica</span>
+            <h3>GestiÃ³n de Dispositivos MÃ©dicos</h3>
+            <p>Curso para estimar necesidades, elaborar requerimientos, sustento tÃ©cnico, control de calidad e indicadores.</p>
+            <ul><li>ValidaciÃ³n, eficiencia y eficacia.</li><li>Producto final: estrategias de gestiÃ³n de dispositivos mÃ©dicos.</li></ul>
+          </article>
+          <article class="program">
+            <span class="tag">ClÃ­nico</span>
+            <h3>VentilaciÃ³n MecÃ¡nica y Paro Cardiorrespiratorio</h3>
+            <p>Formaciones especializadas para actualizar herramientas de manejo clÃ­nico en escenarios crÃ­ticos.</p>
+            <ul><li>Modos ventilatorios y parÃ¡metros.</li><li>Soporte vital bÃ¡sico, avanzado, pediÃ¡trico y neonatal.</li></ul>
+          </article>
+        </div>
+
+        <div class="catalog" aria-label="Otros cursos solicitados">
+          <div class="pill">OfimÃ¡tica para profesionales de salud</div>
+          <div class="pill">Herramientas digitales para organizaciones</div>
+          <div class="pill">Calidad y seguridad del paciente</div>
+          <div class="pill">GestiÃ³n pÃºblica</div>
+          <div class="pill">Sistema de control interno</div>
+          <div class="pill">Power BI y Google Data Studio</div>
+          <div class="pill">Emergencias obstÃ©tricas</div>
+          <div class="pill">Salud mental y bienestar corporativo</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="metodo">
+      <div class="container">
+        <p class="eyebrow">MÃ©todo CIIDEG</p>
+        <h2>Un camino claro: aprender, aplicar, sustentar y mejorar</h2>
+        <p class="section-copy">La propuesta no se queda en clases. El aprendizaje se transforma en documentos, herramientas y decisiones que ayudan a gestionar servicios de salud con mayor orden y evidencia.</p>
+        <div class="steps">
+          <article class="step"><span>1</span><h3>Base conceptual</h3><p>Principios, estÃ¡ndares, filosofÃ­a GEMSES y marco de gestiÃ³n.</p></article>
+          <article class="step"><span>2</span><h3>Herramienta prÃ¡ctica</h3><p>Plantillas, automatizaciones, matrices, indicadores o prompts.</p></article>
+          <article class="step"><span>3</span><h3>AplicaciÃ³n al servicio</h3><p>Trabajo enfocado en la realidad del Ã¡rea, cargo o instituciÃ³n.</p></article>
+          <article class="step"><span>4</span><h3>Producto final</h3><p>Entregable listo para usar, presentar o implementar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lead" id="contacto">
+      <div class="container lead-card">
+        <div>
+          <p class="eyebrow">Solicita informaciÃ³n</p>
+          <h2>CuÃ©ntanos quÃ© necesitas mejorar en tu gestiÃ³n</h2>
+          <p class="section-copy">Te orientamos sobre la formaciÃ³n mÃ¡s adecuada segÃºn tu objetivo: plan de gestiÃ³n, ascenso, procesos, indicadores, IA, herramientas digitales o capacitaciÃ³n institucional.</p>
+        </div>
+        <form class="form" id="leadForm">
+          <div>
+            <label for="name">Nombre completo</label>
+            <input id="name" name="name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="phone">WhatsApp</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+          <div>
+            <label for="interest">InterÃ©s principal</label>
+            <select id="interest" name="interest" required>
+              <option value="">Selecciona una opciÃ³n</option>
+              <option>Programa GEMSES</option>
+              <option>Plan de GestiÃ³n en Salud</option>
+              <option>IA con enfoque en Salud</option>
+              <option>Procesos, proyectos o indicadores</option>
+              <option>CapacitaciÃ³n institucional</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Ejemplo: necesito preparar un plan de gestiÃ³n para postular a un cargo."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+          <p class="note">TambiÃ©n puedes escribir a informes.ciideg@gmail.com</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Respuestas rÃ¡pidas antes de contactar</h2>
+        <div class="faq">
+          <details>
+            <summary>Â¿Las formaciones son virtuales?</summary>
+            <p>SÃ­. CIIDEG cuenta con campus virtual disponible las 24 horas. Algunas formaciones pueden complementarse con sesiones online segÃºn la programaciÃ³n acadÃ©mica.</p>
+          </details>
+          <details>
+            <summary>Â¿QuÃ© diferencia a CIIDEG de un curso genÃ©rico?</summary>
+            <p>El enfoque estÃ¡ en gestiÃ³n aplicada. Cada curso busca que termines con un producto Ãºtil: plan de gestiÃ³n, manual, proyecto, informe, cuadro de mando, plantilla o herramienta digital.</p>
+          </details>
+          <details>
+            <summary>Â¿Pueden adaptar una formaciÃ³n para una instituciÃ³n?</summary>
+            <p>SÃ­. El documento de servicios incluye consultorÃ­a, asesorÃ­a especializada, diseÃ±o de proyectos, herramientas e innovaciÃ³n tecnolÃ³gica para organizaciones de salud.</p>
+          </details>
+          <details>
+            <summary>Â¿CÃ³mo pido el temario completo?</summary>
+            <p>EnvÃ­a tu interÃ©s por WhatsApp al +51 936 220 771 o escribe a informes.ciideg@gmail.com. Un asesor puede enviarte el temario y la modalidad vigente.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#inicio">
+            <img src="assets/logo-ciideg.webp" width="48" height="56" alt="Logo CIIDEG">
+            <span>CIIDEG</span>
+          </a>
+          <p style="margin-top:14px">Centro de InvestigaciÃ³n, InnovaciÃ³n, Desarrollo y GestiÃ³n. FormaciÃ³n, asesorÃ­a y herramientas para organizaciones eficientes en salud.</p>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="mailto:informes.ciideg@gmail.com">informes.ciideg@gmail.com</a></li>
+            <li><a href="https://wa.me/51936220771" target="_blank" rel="noopener">+51 936 220 771</a></li>
+            <li><a href="https://ciideg.com/">www.ciideg.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Formaciones</h3>
+          <ul>
+            <li><a href="#programas">GEMSES</a></li>
+            <li><a href="#programas">Plan de GestiÃ³n</a></li>
+            <li><a href="#programas">IA en Salud</a></li>
+            <li><a href="#programas">Procesos e indicadores</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">Â© 2026 CIIDEG. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/51936220771?text=Hola%20CIIDEG%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20formaciones" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">W</a>
+
+  <script>
+    const nav = document.getElementById('navlinks');
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.getElementById('leadForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const text = [
+        'Hola CIIDEG, quiero informacion sobre sus formaciones.',
+        `Nombre: ${data.get('name')}`,
+        `WhatsApp: ${data.get('phone')}`,
+        `Interes: ${data.get('interest')}`,
+        `Mensaje: ${data.get('message') || 'Sin mensaje adicional'}`
+      ].join('\n');
+      window.open(`https://wa.me/51936220771?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
+
